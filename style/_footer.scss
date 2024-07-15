@@ -1,0 +1,108 @@
+.footer {
+    max-width: 1920px;
+    margin: 0 auto;
+    ;
+  background-color: $green-color;
+  border-radius: 100px 100px 0px 0px;
+  background-image: url(../img/footer_fon.png);
+}
+
+.contacts {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 116px;
+  .title-h2 {
+    padding-bottom: 30px;
+  }
+  .paragraph {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 76px;
+  }
+
+  .contacts-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 78px;
+    .location {
+      display: flex;
+      gap: 20px;
+      align-items: start;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .contact-item-phone {
+      font-size: 30px;
+      line-height: 22px;
+      font-weight: 700;
+    }
+
+    .btn {
+      width: 202px;
+      height: 62px;
+      border: 1px solid #f9d577;
+      border-radius: 30px;
+
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $gold-color;
+    }
+  }
+
+
+  .contacts-item {
+    display: flex;
+    gap: 80px;
+    
+    margin-bottom: 90px;
+    .contact-item:first-child {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .contact-item-social {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    .contact-item:last-child {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        .contact-item-messenger {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+    }
+  }
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.footer__contacts, .footer__pravo {
+    padding-bottom: 70px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+.map {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="header-left">
+            <div class="menu-btn" id="menuBtn" data-burger>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a
+              class="location"
+              href="https://yandex.ru/maps/geo/selo_karshevitoye/53165531/?ll=45.313192%2C48.456797&source=serp_navig&z=15"
+              ><img src="./img/icons/location.png" alt="location icon" />
+              <span>Волгоградская обл, Ленинский район, с. Каршевитое</span>
+            </a>
+          </div>
+
+          <nav class="menu" id="menu" data-menu>
+            <ul class="menu__item">
+              <li><a class="menu__link" href="">Главная</a></li>
+              <li><a class="menu__link" href="">О нашем отеле</a></li>
+              <li><a class="menu__link" href="">Выбрать домик</a></li>
+              <li><a class="menu__link" href="">Развлечения</a></li>
+              <li><a class="menu__link" href="">Видео</a></li>
+              <li><a class="menu__link" href="">Контакты</a></li>
+            </ul>
+            <div class="header-right">
+              <div class="header-contacts">
+                <a href="http://">
+                  <img src="./img/icons/whatsapp.png" alt="whatsapp" />
+                </a>
+                <a href="">
+                  <img src="./img/icons/telegram.png" alt="telegram" />
+                </a>
+                <a class="header-links" href="tel:89275373737"
+                  >8 (927) 537-37-37</a
+                >
+              </div>
+
+              <a class="btn button" href="">оставить заявку</a>
+            </div>
+          </nav>
+          <div class="header-right">
+            <div class="header-contacts">
+              <a href="http://">
+                <img src="./img/icons/whatsapp.png" alt="whatsapp" />
+              </a>
+              <a href="">
+                <img src="./img/icons/telegram.png" alt="telegram" />
+              </a>
+              <a class="header-links" href="tel:89275373737"
+                >8 (927) 537-37-37</a
+              >
+            </div>
+
+            <a class="btn button" href="">оставить заявку</a>
+          </div>
+        </div>
+        <div class="header-main">
+          <img class="logo-img" src="./img/logo/logo.png" alt="летучая рыба логотип" />
+          <h1 class="title-h1">семейный отдых - рыбалка - баня - экоферма</h1>
+          <div class="reserv">
+            <div class="reserv__header">
+              <p>
+                Эко-отель <br />
+                "Летучая рыба"
+              </p>
+              <a class="location" href=""
+                ><img
+                  src="./img/icons/location.png"
+                  alt="location"
+                />Волгоградская область, Ленинский <br />
+                район, с. Каршевитое</a
+              >
+              <p></p>
+            </div>
+            <div class="reverv__search-block"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="about">
+        <div class="about-wrapper">
+          <h2 class="title-h2">Эко-отель “Летучая рыба”</h2>
+          <div class="about__top">
+            <img src="./img/about.png" alt="об отеле летучая рыба" />
+            <p class="paragraph">
+              Наш эко-отель находится в национальном парке
+              <span>Волго-Ахтубинская пойма</span>, на границе Волгоградской и
+              Астраханской области. Здесь царит дух настоящей русской деревни!
+              Мы предусмотрели всё, для того, чтобы ваш отдых был максимально
+              комфортным и разнообразным: натуральные срубы в живописном месте,
+              Экологически чистые продукты, настоящая русская печка, мы сами
+              печем хлеб и выращиваем зелень, баня на воде, мини зоопарк, конные
+              прогулки, рыбалка с профессиональным егерем, лодки в аренду,
+              <span>трансфер из Волгограда</span>.
+            </p>
+          </div>
+          <p class="paragraph-about">
+            Мы принимаем гостей <span>круглый год</span>. Приезжайте и
+            погрузитесь в атмосферу максимального расслабления! Поговаривают,
+            что 2 дня проведённых на «Летучей рыбе»
+            <span>равняются неделе отдыха на море!</span>
+          </p>
+          <div class="about__bottom">
+            <div class="about__text">
+              <p class="paragraph">
+                К нам приятно приезжать с семьей, компанией <br />
+                друзей или организовывать развлекательные <br />
+                и деловые мероприятия. Здесь шикарно <br />смотрятся свадьбы,
+                тематические дни<br />
+                рождения и корпоративы на свежем воздухе.
+                <span>Одновременно здесь может разместиться 100 гостей</span>.
+              </p>
+              <a class="button button-orange">получить консультацию</a>
+            </div>
+            <img src="./img/about_2.png" alt="домики летучая рыба" />
+          </div>
+        </div>
+      </section>
+      <section class="events">
+        <h2 class="title-h2">Чем заняться?</h2>
+        <p class="paragraph">
+          Жить не можете без рыбалки на берегу реки? Не мыслите зимние выходные
+          без лыж и бани?
+        </p>
+        <p class="paragraph paragraph-events">
+          В эко-отеле “Летучая рыба” развлечения на любой вкус!
+        </p>
+        <div class="events-items">
+          <div class="events-item">
+            <img
+              src="./img/events/russkaya_banya_na_vode.png"
+              alt="русская баня на воде"
+            />
+            <p>Русская баня на воде</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/ribalka.png" alt="рыбалка на волге" />
+            <p>Русская баня на воде</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/restoran.png" alt="ресторан “у маруси”" />
+            <p>ресторан “у маруси”</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/piknik.png" alt="пикник в лесу" />
+            <p>пикник в лесу</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/camping.png" alt="туристические походы" />
+            <p>туристические походы</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/zoo.png" alt="зоопарк мини" />
+            <p>зоопарк мини</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/fitness.png" alt="фитнес open air" />
+            <p>фитнес open air</p>
+          </div>
+          <div class="events-item">
+            <img
+              src="./img/events/restoran.png"
+              alt="вкусные блюда русской кухни"
+            />
+            <p>вкусные блюда русской кухни</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/detskoe_disko.png" alt="детское диско" />
+            <p>детское диско</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/kino_na_reke.png" alt="кино на реке" />
+            <p>кино на реке</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/ornitoterapiya.png" alt="ОРНИТОТЕРАПИЯ" />
+            <p>ОРНИТОТЕРАПИЯ</p>
+          </div>
+          <div class="events-item">
+            <img src="./img/events/zimnie_kanikuli.png" alt="зимние каникулы" />
+            <p>зимние каникулы</p>
+          </div>
+        </div>
+        <div class="events-text">
+          <p class="paragraph">
+            Развлечения в эко-отеле «Летучая рыба», в месте, где природа
+            сохранила свой первоначальный вид — в селе Каршевитое. Здесь и река
+            Волга — широка и могуча, и остров необитаемый непроходимый, и лес
+            наш волжский, <span>а главное воздух чистый и душистый</span>.
+          </p>
+          <p class="paragraph">
+            В эко-отеле «Летучая Рыба» вы
+            <span>почувствуете тишину и покой</span>, успеете обдумать свои
+            планы на будущее и поразмыслить над бизнес-стратегией в мягком
+            кресле у горящего камина. В нашей таверне «ТРИ ПЕСКАРЯ» накормят вас
+            <span
+              >по-домашнему вкусными, местными экологически чистыми
+              продуктами</span
+            >. Здесь для вас испекут домашний хлеб в русской печи. К завтраку
+            подадут свежий деревенский творог со сметаной,<br />
+            яичницу из страусиных яиц и домашние перепелиные яйца.
+          </p>
+        </div>
+        <div class="form-events fadeInUp" data-wow-duration="1s">
+          <div class="form-body">
+            <h3>Укажите контактные данные для консультации</h3>
+            <p>
+              Заполните форму и наш сотрудник свяжется с вами в ближайшее время.
+            </p>
+            <p>Все ваши пожелания будут учтены</p>
+            <form action="send.php" method="POST">
+              <input type="hidden" name="utm_source" />
+              <input type="hidden" name="utm_medium" />
+              <input type="hidden" name="utm_campaign" />
+              <input type="hidden" name="utm_term" />
+              <input type="hidden" name="utm_content" />
+
+              <div class="input-items">
+                <div class="input-item">
+                  <label>Как к вам обращаться</label>
+                  <input
+                    class="input-btn"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    required=""
+                  />
+                </div>
+                <div class="input-item">
+                  <label>Введите телефон</label>
+                  <input
+                    class="input-btn"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (___) ___ - __ - __"
+                    required=""
+                  />
+                </div>
+                <div class="input-item">
+                  <label>&nbsp;</label>
+                  <input
+                    type="submit"
+                    value="получить консультацию"
+                    class="button-orange"
+                  />
+                  <label for="personal-data">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="personal-data"
+                      checked=""
+                    />
+                    <span
+                      >Я согласен на обработку
+                      <a href="#">Персональных данных</a></span
+                    >
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="video">
+        <h2 class="title-h2">Посмотрите наши видео</h2>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="contacts">
+          <h2 class="title-h2">Наши контакты</h2>
+          <p class="paragraph">
+            Отпуск, проведенный в деревенском окружении, будет полезен для
+            каждого, кто хочет напитаться новыми впечатлениями, сменить
+            обстановку и побыть вдали от цивилизации.
+          </p>
+          <div class="contacts-address">
+            <img src="./img/logo/logo_footer.png" alt="logo" />
+            <a class="location" href=""
+              ><img
+                src="./img/icons/location.png"
+                alt="location"
+              />Волгоградская область, Ленинский <br />
+              район, с. Каршевитое</a
+            >
+            <a href="tel:89275373737" class="contact-item-phone"
+              >8 (927) 537-37-37</a
+            >
+            <a class="btn button" href="">оставить заявку</a>
+          </div>
+          <div class="contacts-item">
+            <div class="contact-item">
+              <p>
+                Подпишитесь на наши соцсети, чтобы всегда оставаться в курсе
+                новостей:
+              </p>
+              <div class="contact-item-social">
+                <a href="https://vk.com/flying_fish34" target="_blank"
+                  ><img src="./img/icons/vk.png" alt="vk" width="48"
+                /></a>
+                <a href="http://ok.ru/letuchaya.ryba" target="_blank"
+                  ><img src="./img/icons/odnoklassniki.png" alt="ok" width="48"
+                /></a>
+                <a
+                  href="https://www.youtube.com/channel/UCTQ2O11z6yo6M_0F_l_9_bg"
+                  target="_blank"
+                  ><img src="./img/icons/youtube.png" alt="youtube" width="48"
+                /></a>
+                <a href="https://www.facebook.com/flyfishhotel" target="_blank"
+                  ><img
+                    src="./img/icons/facebook.png"
+                    alt="facebook"
+                    width="48"
+                /></a>
+                <a href="#" target="_blank"
+                  ><img
+                    src="./img/icons/soc_instagram.png"
+                    alt="instagram"
+                    width="48"
+                /></a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <p>Пишите в мессенджеры, мы онлайн круглосуточно:</p>
+              <div class="contact-item-messenger">
+                <a href="https://api.whatsapp.com/send?phone=89275373737"
+                  ><img
+                    src="./img/icons/whatsapp.png"
+                    alt="whatsapp"
+                    width="48"
+                /></a>
+                <a href="https://t.me/fish34ru"
+                  ><img
+                    src="./img/icons/telegram.png"
+                    alt="telegram"
+                    width="48"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map" class="map">
+          <div class="ymap-container">
+            <div class="loader loader-default"></div>
+            <div id="map-yandex"><img src="./img/map.png" alt=""></div>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="footer__contacts">
+            <p>© 2010-2024 “Летучая рыба”. Все права защищены</p>
+            <p>Директор – Мазина Галина Геннадьевна; ИНН 3446023709;</p>
+            <p>ОГРН 1073460005156; Р/счет 40702810403100000878;</p>
+            <p>
+              400001, Волгоградская обл., г. Волгоград, ул.Пугачевская, зд. 9/1
+              офис 17
+            </p>
+          </div>
+          <div class="footer__pravo">
+            <a href="#" data-target="#pravila" data-toggle="modal"
+              >Правила проживания в эко-отеле “Летучая рыба”</a
+            ><a href="#" data-target="#soglasie" data-toggle="modal"
+              >Согласие на обработку персональных данных</a
+            >
+            <a href="#" data-target="#politic" data-toggle="modal"
+              >Политика конфиденциальности</a
+            >
+            <a href="https://kingcontext.ru" target="_blank"
+              >Разработано в KINGCONTEXT</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+.events {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .title-h2 {
+    color: #000000;
+    padding-bottom: 30px;
+  }
+
+  .paragraph {
+    color: #000000;
+
+    text-align: center;
+  }
+
+  .paragraph-events {
+    max-width: 920px;
+  }
+
+  .events-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 70px;
+  }
+
+  .events-item {
+    position: relative;
+    p {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 24px;
+      line-height: 23px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+
+  .events-text {
+    max-width: 1120px;
+    .paragraph {
+      text-align: left;
+    }
+    .paragraph:first-child {
+      padding-bottom: 50px;
+    }
+    .paragraph:last-child {
+      padding-bottom: 64px;
+    }
+  }
+
+  .form-events {
+    max-width: 1280px;
+    background-color: $green-color;
+    border-radius: 30px;
+
+    padding: 60px 115px 80px;
+
+    h3 {
+      font-size: 36px;
+      line-height: 36px;
+      text-transform: uppercase;
+      padding-bottom: 37px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 48px;
+      font-weight: 300;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .input-items {
+      display: flex;
+      gap: 47px;
+    }
+
+    .input-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      label {
+        font-family: "Open Sans";
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+
+      .button-orange {
+        width: 340px;
+        height: 80px;
+        border-radius: 40px;
+        margin-top: 10px;
+        margin-bottom: 2px;
+      }
+
+      label[for="personal-data"] {
+        font-size: 12px;
+        line-height: 24px;
+        text-decoration: underline;
+        display: inline-flex;
+        gap: 10px;
+      }
+    }
+
+    .input-btn {
+      width: 310px;
+      height: 74px;
+      border-radius: 37px;
+
+      font-size: 24px;
+      line-height: 24px;
+      color: #000000;
+      padding: 27px 50px;
+
+      transition: all 0.6s;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .input-btn::placeholder {
+      font-size: 24px;
+      line-height: 24px;
+      color: #000000;
+    }
+  }
+}
