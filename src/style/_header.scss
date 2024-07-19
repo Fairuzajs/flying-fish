@@ -1,13 +1,11 @@
 .header {
   background-image: url(../img/main.png);
+  background-repeat: no-repeat;
   max-width: 1920px;
   margin: 0 auto;
-  //background-repeat: no-repeat;
-  border-radius: 0px 0px 100px 100px;
+  border-radius: 0px 0px clamp(40px, 8vw, 100px) clamp(40px, 8vw, 100px) ;
   position: relative;
-  .menu {
-    display: none;
-  }
+
   .btn {
     width: 202px;
     height: 62px;
@@ -32,32 +30,18 @@
 }
 
 .header-main {
-  padding-top: 330px;
+  padding-top: 312px;
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
-
-.reserv {
-  max-width: 1002px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: #00ac5d;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
+.logo-img {
+  margin-bottom: 31px;
 }
 
 .header-top {
-  padding-top: 50px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -65,11 +49,11 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
 
   .header-contacts {
     display: flex;
-    gap: 30px;
+    gap: 27px;
     align-items: center;
     a img {
       width: 32px;
@@ -85,16 +69,11 @@
 
 .header-left {
   display: flex;
-  align-items: center;
+align-items: center;
   gap: 50px;
 }
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,11 +85,12 @@
   &__item {
     display: flex;
     gap: 60px;
+    margin-left: 56px;
   }
 
   &__link {
     font-size: 20px;
-    line-height: 72px;
+    line-height: 28px;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -119,11 +99,110 @@
 .menu-btn {
   width: 48px;
   height: 33px;
+  position: relative;
   span {
     content: "";
     display: inline-block;
     width: 100%;
     height: 3px;
     background-color: #f9d577;
+
+    position: absolute;
+    top: 0px;
+  }
+  span::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #f9d577;
+    top: 12px;
+  }
+  span::before {
+    position: absolute;
+    top: 26px;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    background-color: #f9d577;
+    height: 3px;
+  }
+}
+
+.menu-btn.active span {
+  background: none;
+}
+
+.menu-btn.active span::after {
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+.menu-btn.active span::before {
+  transform: rotate(45deg);
+  top: 15px;
+}
+
+[data-burger] {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 33px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+[data-menu] {
+  position: fixed;
+  top: -100%;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 150px;
+  background-color: $green-color;
+  transition: top 0.7s ease 0s, visibility 0.7s ease 0s;
+  overflow: auto;
+  visibility: hidden;
+  &.active {
+    top: 0;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 1800px) {
+  .menu__item {
+    gap: 30px;
+  }
+  .header-right {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .menu {
+    padding: 16px 10px 167px;
+    flex-direction: column;
+  }
+  [data-menu] {
+    width: 380px;
+    height: 850px;
+    margin: 0;
+
+    .header-right {
+      flex-direction: column;
+    }
+  }
+  .menu__item {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 1220px) {
+  .header {
+    border-radius: 0px 0px 60px 60px;
   }
 }

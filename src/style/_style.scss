@@ -46,6 +46,11 @@ body{
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
+  
+@media screen and (max-width: 1200px) {
+padding-left: 20px;
+padding-right: 20px;
+}
 }
 
 /*  var */
@@ -58,7 +63,7 @@ $gold-color: #f9d577;
   text-transform: uppercase;
   text-align: center;
 
-  padding-bottom: 66px;
+  padding-bottom: 325px;
 }
 
 .title-h2 {

@@ -1,0 +1,68 @@
+.modal-body {
+    width: 490px;
+height: 621px;
+background-color: #ffffff;
+box-shadow: 5px 9px 47px 3px rgba(0,0,0,0.2);
+border-radius: 20px;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+    font-family: 'Open Sans';
+font-size: 24px;
+line-height: 36px;
+font-weight: 600;
+text-transform: uppercase;
+color: #000000;
+}
+
+.form-text {
+    font-family: 'Open Sans';
+font-size: 18px;
+line-height: 24px;
+font-weight: 400;
+color: #000000;
+}
+
+label {
+    
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #969696;
+}
+
+.input-btn {
+    width: 310px;
+    height: 74px;
+    border-radius: 37px;
+
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+    padding: 27px 50px;
+
+    transition: all 0.6s;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .input-btn::placeholder {
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+
+  .button-orange {
+    width: 350px;
+height: 83px;
+border-radius: 41px;
+  }
+}

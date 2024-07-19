@@ -18,15 +18,6 @@ module.exports = {
   },
   entry:{
     index: path.resolve(__dirname, 'src', 'index.js'),
-    // novosti: path.resolve(__dirname, 'src', 'novosti.js'),
-    // item: path.resolve(__dirname, 'src', 'item.js'),
-    // webinars: path.resolve(__dirname, 'src', 'webinars.js'),
-    // lesson: path.resolve(__dirname, 'src', 'lesson.js'),
-    // provisions: path.resolve(__dirname, 'src', 'provisions.js'),
-    // rules: path.resolve(__dirname, 'src', 'rules.js'),
-    // page404: path.resolve(__dirname, 'src', 'page404.js'),
-    // page403: path.resolve(__dirname, 'src', 'page403.js'),
-    // results: path.resolve(__dirname, 'src', 'results.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -40,53 +31,6 @@ module.exports = {
       filename: 'index.html',
 			chunks: ['index'],
 		}),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'novosti.html'),
-    //   filename: 'novosti.html',
-		// 	chunks: ['novosti'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'item.html'),
-    //   filename: 'item.html',
-		// 	chunks: ['item'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'webinars.html'),
-    //   filename: 'webinars.html',
-		// 	chunks: ['webinars'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'lesson.html'),
-    //   filename: 'lesson.html',
-		// 	chunks: ['lesson'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'provisions.html'),
-    //   filename: 'provisions.html',
-		// 	chunks: ['provisions'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'rules.html'),
-    //   filename: 'rules.html',
-		// 	chunks: ['rules'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'page404.html'),
-    //   filename: 'page404.html',
-		// 	chunks: ['page404'],
-		// }),
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'page403.html'),
-    //   filename: 'page403.html',
-		// 	chunks: ['page403'],
-		// }), 
-    // new HtmlWebpackPlugin({
-		// 	template: path.resolve(__dirname, 'src', 'results.html'),
-    //   filename: 'results.html',
-		// 	chunks: ['results'],
-		// }),
-    
-    
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
