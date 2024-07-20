@@ -11,10 +11,46 @@
     color: #000000;
     padding-bottom: 30px;
   }
+  .event-img-back {
+    display: none;
+  }
   .paragraph {
     color: #000000;
     text-align: center;
   }
+  @media screen and (max-width: 922px) {
+    background-image: none;
+    .form-events {
+      position: relative;
+    }
+    .event-img-back {
+      display: block;
+      position: absolute;
+      top: 81%;
+      left: 225px;
+      transform: rotate(90deg);
+      height: 650px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    padding-bottom: 350px;
+    .event-img-back {
+      top: 88%;
+      left: 160px;
+      height: 500px;
+    }
+  }
+
+  @media screen and (max-width: 525px){
+  padding-bottom: 240px;
+    .event-img-back {
+      top: 94%;
+      left: 120px;
+      height: 350px;
+    }
+  }
+ 
 }
 
 .events-items {
@@ -44,7 +80,6 @@
     grid-template-rows: repeat(4, 1fr);
   }
 
-  
   @media screen and (max-width: 1024px) {
     img {
       width: 380px;
@@ -66,7 +101,10 @@
       width: 380px;
       height: 239px;
     }
-}
+  }
+
+ 
+
 }
 
 .events-item {
@@ -97,7 +135,6 @@
   }
   @media screen and (max-width: 1440px) {
     max-width: 900px;
-   
   }
 
   @media screen and (max-width: 1024px) {
@@ -116,17 +153,16 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 525px) {
     max-width: 380px;
     .paragraph {
       max-width: 380px;
     }
   }
-
 }
 
 @media screen and (max-width: 525px) {
- .events-text .paragraph {
+  .events-text .paragraph {
     max-width: 350px;
     margin: 0 auto;
   }
@@ -140,7 +176,7 @@
   background-color: $green-color;
   border-radius: 45px;
 
-  padding: 60px clamp(33px, 6.5vw, 115px) 90px;
+  padding: 60px 115px 90px;
 
   h3 {
     font-size: clamp(20px, 4vw, 36px);
@@ -158,23 +194,19 @@
     margin: 0 auto;
     text-align: center;
     letter-spacing: 0.1px;
-   
   }
 
   .input-items {
     display: flex;
     gap: 47px;
-
     .input-item:last-child {
       transform: translateY(10px);
     }
-
     .input-item:nth-child(2) {
       .input-btn {
         padding: 27px 50px 27px 60px;
       }
     }
-
     .input-item:nth-child(1) {
       .input-btn {
         padding: 27px 50px 27px 95px;
@@ -241,6 +273,7 @@
   .events .form-events {
     max-width: 1000px;
     margin: 0 auto;
+
     .input-items {
       flex-direction: column;
     }
@@ -250,24 +283,25 @@
 
     .input-items {
       gap: 40px;
-  }
+    }
 
-  .input-item:last-child {
-    transform: translateY(0px);
+    .input-item:last-child {
+      transform: translateY(0px);
+    }
   }
 }
-}
 
- .events-bg-img {
-    position: absolute;
-    left: 0;
-    bottom: -85px;
-  }
+.events-bg-img {
+  position: absolute;
+  left: 0;
+  bottom: -85px;
+}
 
 @media screen and (max-width: 1220px) {
   .events .form-events {
     max-width: 700px;
     margin: 0 auto;
+    padding: 60px 80px 60px;
   }
   .events-bg-img {
     display: none;
@@ -275,12 +309,15 @@
 }
 
 @media screen and (max-width: 1024px) {
-  
   .events > .paragraph {
     max-width: 730px;
     br {
       display: none;
     }
+  }
+  .button-orange {
+    font-size: 16px;
+    width: 330px;
   }
 }
 
@@ -288,14 +325,13 @@
   .events .form-events {
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 40px 50px 60px;
     h3 {
       padding-bottom: 16px;
     }
   }
 
   .events .form-events {
-
     p {
       padding-bottom: 25px;
       br {
@@ -307,24 +343,34 @@
   .events > .paragraph {
     max-width: 480px;
   }
-
 }
-
 
 @media screen and (max-width: 525px) {
-.events .form-events {
-  max-width: 370px;
-  p {
-    padding-bottom: 0;
-    display: inline-block;
-    br {
-      display: none;
+  .events .form-events {
+    max-width: 370px;
+    padding: 40px 18px 48px;
+    h3 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    p {
+      padding-bottom: 38px;
+      display: inline-block;
+      br {
+        display: none;
+      }
+      .input-item label {
+        padding-right: 10px;
+      }
+    }
+    .input-items {
+      gap: 20px;
+    }
+    .button-orange {
+      font-size: 15px;
+      width: 310px;
     }
   }
-  .input-items {
-    gap: 20px;
-}
-}
   .events-item p {
     font-size: 18px;
     top: 23px;
@@ -334,6 +380,10 @@
   .events > .paragraph {
     max-width: 357px;
   }
-  
-}
 
+  .events .form-events {
+    .input-item:last-child {
+      transform: translateY(-28px);
+    }
+  }
+}

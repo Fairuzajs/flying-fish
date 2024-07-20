@@ -32,6 +32,7 @@
           </div>
 
           <nav class="menu" id="menu" data-menu>
+            <img class="logo-img" src="./img/logo/logo.png" alt="летучая рыба логотип" />
             <ul class="menu__item">
               <li><a class="menu__link" href="" data-menu-item>Главная</a></li>
               <li><a class="menu__link" href="" data-menu-item>О нашем отеле</a></li>
@@ -75,6 +76,9 @@
         <div class="header-main">
           <img class="logo-img" src="./img/logo/logo.png" alt="летучая рыба логотип" />
           <h1 class="title-h1">семейный отдых - рыбалка - баня - экоферма</h1>
+          <a class="button-orange btn" href="">
+              Забронировать домик
+          </a>
           <div class="reserv">
 
           </div>
@@ -190,6 +194,7 @@
             </div>
           </div>
           <div class="event-bottom">
+           
             <div class="events-text">
               <p class="paragraph">
                 Развлечения в эко-отеле «Летучая рыба», в месте, где природа
@@ -211,6 +216,7 @@
               </p>
             </div>
             <div class="form-events fadeInUp" data-wow-duration="1s">
+              <img class="event-img-back" src="./img/wave.png" alt="wave">
               <div class="form-body">
                 <h3>Укажите контактные данные для консультации</h3>
                 <p>
@@ -363,12 +369,13 @@
         <div class="footer-content">
 <div class="container">
   <div class="footer__contacts">
-    <p>© 2010-2024 “Летучая рыба”. Все права защищены</p>
-    <p>Директор – Мазина Галина Геннадьевна; ИНН 3446023709;</p>
-    <p>ОГРН 1073460005156; Р/счет 40702810403100000878;</p>
+    <p>span© 2010-2024 “Летучая рыба”. Все права защищены</p>
+    <p>Директор – Мазина Галина Геннадьевна; <span class="inn-none">ИНН 3446023709;</span></p>
+    <p><span class="inn-block">ИНН 3446023709;</span>ОГРН 1073460005156; <br> <br><span>Р/счет 40702810403100000878;</span>
+      </p>
     <p>
-      400001, Волгоградская обл., г. Волгоград, ул.Пугачевская, зд. 9/1
-      офис 17
+      400001, Волгоградская обл., г. Волгоград,<br> <br><span>ул.Пугачевская, зд. 9/1
+        офис 17</span>
     </p>
   </div>
   <div class="footer__pravo">
@@ -393,7 +400,7 @@
         <div class="modal-content">
           <div class="modal-body center">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <!-- <img src="img/x.svg" alt="" width="20" height="20"></button> -->
+              <img src="./img/icons/close-btn.png" alt="" width="20" height="20"></button>
             <h4>
               Заполните форму <span class="d-none d-lg-block"></span>
               на&nbsp;бесплатную консультацию
@@ -409,7 +416,7 @@
               <label>Как к вам обращаться</label> 
               <input class="input-btn" type="text" name="name" placeholder="Ваше имя" required="">
               <label>Введите телефон</label>              
-              <input  class="input-btn" type="tel" name="phone" placeholder="+7 (___) ___ - __ - __" required="">
+              <input  class="input-btn input-tel" type="tel" name="phone" placeholder="+7 (___) ___ - __ - __" required="">
               <input type="hidden" name="email" value="без email" required="">
               <input type="submit" value="Получить консультацию" class="button-orange">
               <label for="personal-data-2">

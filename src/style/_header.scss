@@ -27,6 +27,10 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .button-orange {
+    display: none;
+  }
 }
 
 .header-main {
@@ -53,7 +57,7 @@
 
   .header-contacts {
     display: flex;
-    gap: 27px;
+    gap: 23px;
     align-items: center;
     a img {
       width: 32px;
@@ -77,14 +81,13 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 41px 55px 49px;
   border-radius: 0px 0px 40px 40px;
+  padding: 36px 55px 49px 90px;
   background-color: $green-color;
 
   &__item {
     display: flex;
-    gap: 60px;
+    gap: 57px;
     margin-left: 56px;
   }
 
@@ -93,6 +96,10 @@ align-items: center;
     line-height: 28px;
     font-weight: 400;
     text-transform: uppercase;
+  }
+
+  .logo-img {
+    display: none;
   }
 }
 
@@ -182,27 +189,85 @@ align-items: center;
 }
 
 @media (max-width: 1620px) {
+
+  .header {
+    position: relative;
+  
+      border-radius: 0px 0px 60px 60px;
+    
+    .btn {
+      width: 272px;
+      height: 80px;
+      border-radius: 46px;
+      font-size: 18px;
+    }  
+  }
+  .header-right .header-contacts .header-links {
+    font-size: 30px;
+  }
+  .header-left {
+    flex-direction: row-reverse;
+    gap: clamp(250px, 50vw, 950px);
+    
+  }
+
+  .header-right {
+    gap: 60px;
+  }
+
+  .header-top > .header-right {
+      display: none;
+    
+  }
   .menu {
-    padding: 16px 10px 167px;
+    padding: 47px 10px 167px;
     flex-direction: column;
+    border-radius: 0px;
+    justify-content: start;
+    gap: 50px;
+
+   
+    .logo-img {
+      display: inline-block;
+      width: 225px;
+      height: 59px;
+      margin-bottom: 0px;
+    }
+    &__link {
+      font-size: 24px;
+    }
+    &__item {
+      align-items: center;
+      margin-left: 17px;
+      gap: 32px;
+      margin-bottom: 7px;
+    }
+    
   }
   [data-menu] {
     width: 380px;
     height: 850px;
     margin: 0;
-
+    left: auto;
     .header-right {
       flex-direction: column;
     }
+   
+  }
+
+  [data-burger] {
+    right: 8px;
+    top: 43px;
+    position: absolute;
+    width: 40px;
   }
   .menu__item {
     flex-direction: column;
   }
 }
 
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 1220px) {
-  .header {
-    border-radius: 0px 0px 60px 60px;
-  }
 }
+
+
