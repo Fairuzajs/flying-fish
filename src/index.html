@@ -34,49 +34,52 @@
           <nav class="menu" id="menu" data-menu>
             <img class="logo-img" src="./img/logo/logo.png" alt="летучая рыба логотип" />
             <ul class="menu__item">
-              <li><a class="menu__link" href="" data-menu-item>Главная</a></li>
-              <li><a class="menu__link" href="" data-menu-item>О нашем отеле</a></li>
-              <li><a class="menu__link" href="" data-menu-item>Выбрать домик</a></li>
-              <li><a class="menu__link" href="" data-menu-item>Развлечения</a></li>
-              <li><a class="menu__link" href="" data-menu-item>Видео</a></li>
-              <li><a class="menu__link" href="" data-menu-item>Контакты</a></li>
+              <li><a class="menu__link" href="./index.html" data-menu-item>Главная</a></li>
+              <li><a class="menu__link" href="#about" data-menu-item>О нашем отеле</a></li>
+              <li><a class="menu__link" href="#rezerv" data-menu-item>Выбрать домик</a></li>
+              <li><a class="menu__link" href="#events" data-menu-item>Развлечения</a></li>
+              <li><a class="menu__link" href="#video" data-menu-item>Видео</a></li>
+              <li><a class="menu__link" href="#contacts" data-menu-item>Контакты</a></li>
             </ul>
-            <div class="header-right">
+            <div class="header-right-menu">
               <div class="header-contacts">
-                <a href="http://">
-                  <img src="./img/icons/whatsapp.png" alt="whatsapp" />
+                <a href="https://api.whatsapp.com/send?phone=89275373737">
+                  <img src="./img/icons/whatsup.svg" alt="whatsapp" />
                 </a>
-                <a href="">
-                  <img src="./img/icons/telegram.png" alt="telegram" />
+                <a href="https://t.me/fish34ru">
+                  <img src="./img/icons/tg.svg" alt="telegram" />
                 </a>
                 <a class="header-links" href="tel:89275373737"
                   >8 (927) 537-37-37</a
                 >
               </div>
 
-              <a class="btn button" href="">оставить заявку</a>
+              <button class="button" data-path="modal" data-animation="fadeInUp" data-speed="300">оставить заявку
+
+              </button>
             </div>
+             
+          
           </nav>
           <div class="header-right">
             <div class="header-contacts">
               <a href="http://">
-                <img src="./img/icons/whatsapp.png" alt="whatsapp" />
+                <img src="./img/icons/whatsup.svg" alt="whatsapp" />
               </a>
               <a href="">
-                <img src="./img/icons/telegram.png" alt="telegram" />
+                <img src="./img/icons/tg.svg" alt="telegram" />
               </a>
               <a class="header-links" href="tel:89275373737"
                 >8 (927) 537-37-37</a
               >
             </div>
-
-            <a class="btn button" href="">оставить заявку</a>
+            <a class="btn button" data-path="modal">оставить заявку</a>
           </div>
         </div>
         <div class="header-main">
           <img class="logo-img" src="./img/logo/logo.png" alt="летучая рыба логотип" />
           <h1 class="title-h1">семейный отдых - рыбалка - баня - экоферма</h1>
-          <a class="button-orange btn" href="">
+          <a class="button-orange" data-path="modal">
               Забронировать домик
           </a>
           <div class="reserv">
@@ -86,10 +89,11 @@
       </div>
     </header>
     <main class="main">
-      <section class="about">
-        <img class="about-bg-left" src="./img/wave.png" alt="wave background">
-        <img class="about-bg-right" src="./img/wave.png" alt="wave background">
+      <section class="about" id="about">
+        
         <div class="about-wrapper">
+          <img class="about-bg-left" src="./img/wave_1.svg" alt="wave background">
+        <img class="about-bg-right" src="./img/wave_1.svg" alt="wave background">
           <h2 class="title-h2">Эко-отель “Летучая рыба”</h2>
           <div class="about__top">
             <img src="./img/about.png" alt="об отеле летучая рыба" />
@@ -121,13 +125,13 @@
                 рождения и корпоративы на свежем воздухе.
                 <span>Одновременно здесь может разместиться 100 гостей</span>.
               </p>
-              <a class="button button-orange">получить консультацию</a>
+              <a class="button-orange">получить консультацию</a>
             </div>
             <img src="./img/about_2.png" alt="домики летучая рыба" />
           </div>
         </div>
       </section>
-      <section class="events">
+      <section class="events" id="events">
         
      
           <h2 class="title-h2">Чем заняться?</h2>
@@ -216,7 +220,7 @@
               </p>
             </div>
             <div class="form-events fadeInUp" data-wow-duration="1s">
-              <img class="event-img-back" src="./img/wave.png" alt="wave">
+              <img class="event-img-back" src="./img/wave_1.svg" alt="wave">
               <div class="form-body">
                 <h3>Укажите контактные данные для консультации</h3>
                 <p>
@@ -257,18 +261,11 @@
                         value="получить консультацию"
                         class="button-orange"
                       />
-                      <label for="personal-data">
-                        <input
-                          type="checkbox"
-                          name=""
-                          id="personal-data"
-                          checked=""
-                        />
-                        <span
-                          >Я согласен на обработку
-                          <a href="#">Персональных данных</a></span
-                        >
-                      </label>
+                      <div class="bnt-checkbox">
+                        <input class="checkbox" type="checkbox" id="personal-data">
+                        <label for="personal-data"></label>
+                        <span>Я согласен на обработку <a href="#">Персональных данных</a></span>
+                      </div>
                     </div>
                   </div>
                 </form>
@@ -276,14 +273,14 @@
             </div>
           </div>     
       </section>
-      <section class="video">
+      <section class="video" id="video">
         <h2 class="title-h2">Посмотрите наши видео</h2>
       </section>
     </main>
 
     <footer class="footer">
       
-        <div class="contacts">
+        <div class="contacts" id="contacts">
 
   <h2 class="title-h2">Наши контакты</h2>
   <p class="paragraph">
@@ -306,7 +303,7 @@
     <a href="tel:89275373737" class="contact-item-phone"
       >8 (927) 537-37-37</a
     >
-    <a class="btn button" href="">оставить заявку</a>
+    <a class="button" data-path="menu">оставить заявку</a>
    </div>
 
   </div>
@@ -318,25 +315,25 @@
       </p>
       <div class="contact-item-social">
         <a href="https://vk.com/flying_fish34" target="_blank"
-          ><img src="./img/icons/vk.png" alt="vk"
+          ><img src="./img/icons/vk.svg" alt="vk"
         /></a>
         <a href="http://ok.ru/letuchaya.ryba" target="_blank"
-          ><img src="./img/icons/odnoklassniki.png" alt="ok"
+          ><img src="./img/icons/ok.svg" alt="ok"
         /></a>
         <a
           href="https://www.youtube.com/channel/UCTQ2O11z6yo6M_0F_l_9_bg"
           target="_blank"
-          ><img src="./img/icons/youtube.png" alt="youtube"
+          ><img src="./img/icons/youtube.svg" alt="youtube"
         /></a>
         <a href="https://www.facebook.com/flyfishhotel" target="_blank"
           ><img
-            src="./img/icons/facebook.png"
+            src="./img/icons/facebook.svg"
             alt="facebook"
           
         /></a>
         <a href="#" target="_blank"
           ><img
-            src="./img/icons/soc_instagram.png"
+            src="./img/icons/insta.svg"
             alt="instagram"
             
         /></a>
@@ -347,13 +344,13 @@
       <div class="contact-item-messenger">
         <a href="https://api.whatsapp.com/send?phone=89275373737"
           ><img
-            src="./img/icons/whatsapp.png"
+            src="./img/icons/whatsup.svg"
             alt="whatsapp"
             
         /></a>
         <a href="https://t.me/fish34ru"
           ><img
-            src="./img/icons/telegram.png"
+            src="./img/icons/tg.svg"
             alt="telegram"
             
         /></a>
@@ -366,10 +363,10 @@
 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8872fd0bfeae70e547346b6a8651b769058fb931ad4958ccf0cc0ac891c56680&amp;source=constructor"></iframe>
        
         </div>
-        <div class="footer-content">
-<div class="container">
-  <div class="footer__contacts">
-    <p>span© 2010-2024 “Летучая рыба”. Все права защищены</p>
+<div class="footer-content">
+
+     <div class="footer__contacts">
+    <p>© 2010-2024 “Летучая рыба”. Все права защищены</p>
     <p>Директор – Мазина Галина Геннадьевна; <span class="inn-none">ИНН 3446023709;</span></p>
     <p><span class="inn-block">ИНН 3446023709;</span>ОГРН 1073460005156; <br> <br><span>Р/счет 40702810403100000878;</span>
       </p>
@@ -377,8 +374,8 @@
       400001, Волгоградская обл., г. Волгоград,<br> <br><span>ул.Пугачевская, зд. 9/1
         офис 17</span>
     </p>
-  </div>
-  <div class="footer__pravo">
+    </div>
+    <div class="footer__pravo">
     <a href="#" data-target="#pravila" data-toggle="modal"
       >Правила проживания в эко-отеле “Летучая рыба”</a
     ><a href="#" data-target="#soglasie" data-toggle="modal"
@@ -390,17 +387,16 @@
     <a href="https://kingcontext.ru" target="_blank"
       >Разработано в KINGCONTEXT</a
     >
-  </div>
-</div>
-        </div>
+    </div>
+
+ </div>
      
     </footer>
-    <div class="modal fade" id="modal-call" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body center">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <img src="./img/icons/close-btn.png" alt="" width="20" height="20"></button>
+    <div class="modal fade">
+        <div class="modal-content" data-target="modal">
+          <div class="modal-body">
+            <button type="button" class="close">
+              <img src="./img/icons/btn_close.svg" alt="" width="20" height="20"></button>
             <h4>
               Заполните форму <span class="d-none d-lg-block"></span>
               на&nbsp;бесплатную консультацию
@@ -419,13 +415,14 @@
               <input  class="input-btn input-tel" type="tel" name="phone" placeholder="+7 (___) ___ - __ - __" required="">
               <input type="hidden" name="email" value="без email" required="">
               <input type="submit" value="Получить консультацию" class="button-orange">
-              <label for="personal-data-2">
-                <input type="checkbox" name="" id="personal-data-2" checked="">
+              <div class="bnt-checkbox">
+                <input class="checkbox" type="checkbox" id="personal-data-2">
+                <label for="personal-data-2"></label>
                 <span>Я согласен на обработку <a href="#">Персональных данных</a></span>
-              </label>
+              </div>
             </form> 
           </div>
         </div>
-      </div>
+
   </body>
 </html>

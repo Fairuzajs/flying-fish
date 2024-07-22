@@ -38,20 +38,6 @@
       line-height: 22px;
       font-weight: 700;
     }
-
-    .btn {
-      width: 202px;
-      height: 62px;
-      border: 1px solid #f9d577;
-      border-radius: 30px;
-
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: $gold-color;
-    }
   }
 
   .contacts-item {
@@ -209,7 +195,7 @@
       font-size: 37px;
     }
 
-    .btn {
+    .button {
       width: 243px;
       height: 70px;
       border-radius: 40px;
@@ -237,8 +223,14 @@
 @media screen and (max-width: 768px) {
   .footer__contacts {
     gap: 25px;
-  }
+    padding-bottom: 55px;  
+  
+}
 
+.footer-content {
+  flex-direction: column;
+  max-width: 400px;
+}
   .contacts .contacts-address {
     padding-bottom: 48px;
   }
@@ -330,6 +322,10 @@
     width: 41px;
     height: 41px;
   }
+
+  .footer-content {
+    max-width: 350px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -361,5 +357,20 @@
   .footer__contacts,
   .footer__pravo {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .footer .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-content {
+    max-width: 320px;
+  }
+
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

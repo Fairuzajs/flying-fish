@@ -1,12 +1,14 @@
 .events {
-  max-width: 1920px;
-  margin: 0 auto;
+  // max-width: 1920px;
+  // margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 450px;
+  padding-bottom: 530px;
   background-image: url(../img/listya.png);
+  background-repeat: no-repeat;
+  background-position:right bottom;
   .title-h2 {
     color: #000000;
     padding-bottom: 30px;
@@ -26,28 +28,27 @@
     .event-img-back {
       display: block;
       position: absolute;
-      top: 81%;
-      left: 225px;
-      transform: rotate(90deg);
-      height: 650px;
+      top: 110%;
+      left: 15px;
+      height: 250px;
     }
   }
 
   @media screen and (max-width: 768px){
     padding-bottom: 350px;
     .event-img-back {
-      top: 88%;
-      left: 160px;
-      height: 500px;
+      top: 105%;
+      left: 10px;
+      height: 180px;
     }
   }
 
   @media screen and (max-width: 525px){
   padding-bottom: 240px;
     .event-img-back {
-      top: 94%;
-      left: 120px;
-      height: 350px;
+      left: 16px;
+      top: 109%;
+      height: 130px;
     }
   }
  
@@ -59,51 +60,47 @@
   grid-template-rows: repeat(3, 1fr);
   padding-top: clamp(33px, 5vw, 54px);
   padding-bottom: clamp(54px, 8vw, 70px);
+
   @media screen and (max-width: 1920px) {
     img {
-      width: 430px;
+    width: clamp(380px, 25vw, 480px);
     }
+    grid-template-columns: repeat(4, clamp(380px, 25vw, 480px));
+    grid-template-rows: repeat(3, 1fr);
   }
-  @media screen and (max-width: 1920px) {
+
+  @media screen and (max-width: 1520px) {
     img {
-      width: 430px;
+    width: clamp(350px, 33vw, 506.67px);
     }
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, clamp(350px, 33vw, 506.67px));
     grid-template-rows: repeat(4, 1fr);
   }
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: 1050px) {
     img {
-      width: 450px;
+      width: clamp(330px, 50vw, 505px);
     }
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, clamp(330px, 50vw, 505px));
+    grid-template-rows: repeat(6, 1fr);
+    .events-item p {
+      font-size: 20px;}
   }
-
-  @media screen and (max-width: 1024px) {
+  
+  @media screen and (max-width: 660px) {
     img {
-      width: 380px;
+      width: clamp(380px, 100vw, 660px);
+ 
     }
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-
-  @media screen and (max-width: 768px) {
-    img {
-      width: 480px;
-    }
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, clamp(380px, 100vw, 660px));
     grid-template-rows: repeat(12, 1fr);
   }
 
-  @media screen and (max-width: 525px) {
-    img {
-      width: 380px;
-      height: 239px;
-    }
+  .events-item p {
+    font-size: clamp(18px, 4.5vw, 24px);
   }
 
- 
+
 
 }
 
@@ -237,12 +234,28 @@
       margin-bottom: 2px;
     }
 
-    label[for="personal-data"] {
+
+    .bnt-checkbox {
       font-size: 12px;
       line-height: 24px;
-      text-decoration: underline;
       display: inline-flex;
       gap: 10px;
+      label {
+        width: 19px;
+        height: 19px;
+      }
+      span {
+        font-family: "Open Sans";
+        font-size: 12.5px;
+        line-height: 24px;
+        font-weight: 400;
+        color:#ffffff; 
+        text-decoration: none;
+        a {
+          color:#ffffff; 
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -286,25 +299,18 @@
     }
 
     .input-item:last-child {
-      transform: translateY(0px);
+      transform: translateY(-32px);
     }
   }
 }
 
-.events-bg-img {
-  position: absolute;
-  left: 0;
-  bottom: -85px;
-}
+
 
 @media screen and (max-width: 1220px) {
   .events .form-events {
     max-width: 700px;
     margin: 0 auto;
     padding: 60px 80px 60px;
-  }
-  .events-bg-img {
-    display: none;
   }
 }
 
@@ -372,7 +378,6 @@
     }
   }
   .events-item p {
-    font-size: 18px;
     top: 23px;
     left: 18px;
   }

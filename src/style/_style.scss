@@ -62,8 +62,7 @@ $gold-color: #f9d577;
   line-height: clamp(36px, 5.5vw, 72px);
   text-transform: uppercase;
   text-align: center;
-
-  padding-bottom: 325px;
+ font-weight: 400;
 }
 
 .title-h2 {
@@ -89,23 +88,40 @@ font-weight: 700;
 text-transform: uppercase;
 letter-spacing: 0.05em;
 color: #000000;
-background-color: #fff;
-
 display: inline-flex;
 align-items: center;
 justify-content: center;
 border-radius: 50px;
 background-color: $gold-color;
+transition: all 0.6s;
+&:hover {
+  cursor: pointer;
+  background-color: #f98d00;
+  color:#ffffff;
+}
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 202px;
+  height: 62px;
+  transition: all 0.6s;
+  border: 1px solid #f9d577;
+  border-radius: 30px;
 
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f9d577;
   transition: all 0.6s;
   &:hover {
     cursor: pointer;
+    background-color:#f9d577;
+    color:#000000;
   }
 }
 

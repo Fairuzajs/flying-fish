@@ -3,24 +3,28 @@
   padding-top: clamp(70px, 10vw, 139px); //81
   padding-bottom: clamp(90px, 14vw, 160px);
   position: relative;
-  max-width: 1920px;
-  margin: 0 auto;
-
+  overflow: hidden;
   .title-h2 {
     padding-bottom: clamp(50px, 8vw, 100px);
     padding-left: 14px;
   }
-  
+ 
 }
 
 .about-bg-left {
-  left: 0;
-  bottom: 140px;
+  left: -294px;
+  bottom: 384px;
+  transform: rotate(90deg);
+  height: 349px;
+  width: 936px;
 }
 
 .about-bg-right {
-  right: 0;
-  top: 140px;
+  right: -374px;
+  top: 456px;
+  transform: rotate(-90deg);
+  height: 349px;
+  width: 936px;
 }
 .about-wrapper {
   max-width: 1920px;
@@ -40,8 +44,8 @@
 
 .about__text {
   .button-orange {
-    width: clamp(286px, 35vw, 380px);
-    height: clamp(76px, 10vw, 100px);
+    width: clamp(286px, 30vw, 380px);
+    height: clamp(76px, 6vw, 100px);
   }
 }
 
@@ -56,6 +60,7 @@
   }
 }
 .about__top {
+  z-index: 10;
   display: flex;
   align-self: start;
   gap: 70px;
@@ -66,6 +71,7 @@
 }
 
 .about__bottom {
+  z-index: 10;
   align-self: end;
   display: flex;
   gap: 40px;
@@ -76,8 +82,52 @@
   }
 }
 
+@media screen and (max-width: 1920px) {
 
-@media screen and (max-width: 1620px) {
+  .about-bg-left {
+    left: -454px;
+    bottom: 384px;
+  }
+  
+  .about-bg-right {
+    right: -504px;
+    top: 456px;
+  }
+  .about__top img, 
+  .about__bottom img {
+    width: 600px;
+    height: 408px;
+
+  }
+
+  .about__top .paragraph,
+  .about__bottom .paragraph {
+    max-width: 800px;
+    br {
+      display: none;
+    }
+  }
+  .paragraph-about  {
+    max-width: 1500px;
+  
+  }
+
+  .about__top {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+
+  .about-bg-left,
+.about-bg-right {
+ display: none;
+}
+.about img {
+  width: clamp(370px, 90vw, 780px); //370
+  height: clamp(248px, 60vw, 530px); //248
+  border-radius: 20px;
+}
   .about-wrapper {
     padding-left: 50px;
     padding-right: 50px;
@@ -130,13 +180,6 @@
   .about__bottom .paragraph {
     padding: 0px;
   }
-  
-.about-bg-left,
-.about-bg-right {
- display: none;
-}
-
-
 
 }
 
@@ -147,11 +190,6 @@
     height: max(246px, min(60vw, 530px));
     border-radius: 20px;
 }
-  .about-wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
   .about .title-h2 {
     padding-bottom: 31px;
     padding-left: 3px;
@@ -159,18 +197,9 @@
 
   .paragraph-about {
     padding-bottom: 20px;
-    max-width: 350px;
     margin: 0 auto;
   }
 
-  .about__bottom .paragraph {
-    max-width: 352px;
-  }
 
 }
 
-@media screen and (max-width: 420px) {
-  .about__top .paragraph {
-    max-width: 352px;
-  }
-}

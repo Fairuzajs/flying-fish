@@ -1,7 +1,100 @@
+.modal {
+	--transition-time: 0.3s;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: rgba(0,0,0, 0.5);
+	cursor: pointer;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal::before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.modal__container {
+	position: relative;
+	display: none;
+	vertical-align: middle;
+	background-color: #fff;
+	border-radius: 32px;
+background: var(--Main-White, #FFF);
+padding: 32px;
+/* Shadow */
+box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+	cursor: default;
+	text-align: left;
+}
+
+
+
+.modal.is-open {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal-body.modal-open {
+	display: inline-block;
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+	opacity: 1;
+	transition: opacity var(--transition-time);
+}
+
+// .fadeInUp {
+// 	opacity: 0;
+// 	transform: translateY(-100px);
+// 	transition: opacity var(--transition-time), transform var(--transition-time);
+// }
+
+.fadeInUp.animate-open {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+*:focus {
+	outline: 3px red solid;
+}
+
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+
 .modal-body {
+    display: none;
+    vertical-align: middle;
+
+    cursor: default;
+    text-align: left;
   width: 490px;
   height: 621px;
-  background-color: #ffffff;
+
   box-shadow: 5px 9px 47px 3px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 58px 29px 50px 29px;
@@ -11,6 +104,30 @@
   justify-content: center;
 
   position: relative;
+
+  .bnt-checkbox {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    label {
+      width: 19px;
+      height: 19px;
+    }
+    span {
+      font-family: "Open Sans";
+      font-size: 12.5px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #969696;
+      text-decoration: none;
+
+      a {
+        text-decoration: underline;
+        color: #6cc4ff;
+      }
+    }
+  }
 
   form {
     display: flex;
@@ -29,11 +146,11 @@
     text-align: center;
   }
 
-
   .close {
     position: absolute;
     top: 20px;
     right: 20px;
+    background-color: #fff;
   }
 
   .form-text {
@@ -60,12 +177,11 @@
     width: 345px;
     height: 74px;
     border-radius: 37px;
-
     font-size: 24px;
     line-height: 24px;
     color: #000000;
     padding: 27px 50px 27px 113px;
-    background-color: #fafafa;
+    background-color: #fff9e9;
     transition: all 0.6s;
     &:hover {
       cursor: pointer;
@@ -78,14 +194,13 @@
     margin-bottom: 20px;
   }
 
-
   .input-btn::placeholder {
     font-size: 24px;
     line-height: 24px;
     color: #000000;
   }
 
-  .input-btn:first-child::placeholder{
+  .input-btn:first-child::placeholder {
     padding-left: 20px;
   }
   .button-orange {
@@ -93,14 +208,40 @@
     height: 83px;
     border-radius: 41px;
   }
+}
 
-  label[for="personal-data-2"] {
-    font-size: 13px;padding-top: 25px;
-    input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      margin-right: 5px;
-      
-    }
-  }
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 13px;
+}
+.checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+
+.checkbox:checked + label::before {
+  cursor: pointer;
+  background: #c8c8c8;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-image: url(../img/icons/checkbox_ok.svg);
 }
