@@ -1,97 +1,89 @@
 .modal {
-	--transition-time: 0.3s;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1000;
-	background-color: rgba(0,0,0, 0.5);
-	cursor: pointer;
-	overflow-y: auto;
-	overflow-x: hidden;
-	text-align: center;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity var(--transition-time), visibility var(--transition-time);
+  --transition-time: 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(#2c4b47, 0.5);
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
 }
 
 .modal::before {
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .modal__container {
-	position: relative;
-	display: none;
-	vertical-align: middle;
-	background-color: #fff;
-	border-radius: 32px;
-background: var(--Main-White, #FFF);
-padding: 32px;
-/* Shadow */
-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
-	cursor: default;
-	text-align: left;
+  position: relative;
+  display: none;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 20px;
+  background: var(--Main-White, #fff);
+  /* Shadow */
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  text-align: left;
 }
-
-
 
 .modal.is-open {
-	opacity: 1;
-	visibility: visible;
-	transition: opacity var(--transition-time), visibility var(--transition-time);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
 }
 
-.modal-body.modal-open {
-	display: inline-block;
+.modal__container.modal-open {
+  display: inline-block;
 }
 
 .fade {
-	opacity: 0;
-	transition: opacity var(--transition-time);
+  opacity: 0;
+  transition: opacity var(--transition-time);
 }
 
 .fade.animate-open {
-	opacity: 1;
-	transition: opacity var(--transition-time);
+  opacity: 1;
+  transition: opacity var(--transition-time);
 }
 
-// .fadeInUp {
-// 	opacity: 0;
-// 	transform: translateY(-100px);
-// 	transition: opacity var(--transition-time), transform var(--transition-time);
-// }
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
 
 .fadeInUp.animate-open {
-	opacity: 1;
-	transform: translateY(0);
-	transition: opacity var(--transition-time), transform var(--transition-time);
-}
-
-*:focus {
-	outline: 3px red solid;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
 }
 
 .disable-scroll {
-	position: relative;
-	overflow: hidden;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-
 .modal-body {
-    display: none;
-    vertical-align: middle;
+  display: none;
+  vertical-align: middle;
 
-    cursor: default;
-    text-align: left;
+  cursor: default;
+  text-align: left;
   width: 490px;
   height: 621px;
 
@@ -128,6 +120,9 @@ box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
       }
     }
   }
+
+
+
 
   form {
     display: flex;
@@ -235,8 +230,6 @@ box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
   cursor: pointer;
 }
 
-
-
 .checkbox:checked + label::before {
   cursor: pointer;
   background: #c8c8c8;
@@ -245,3 +238,51 @@ box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
   background-size: 100% 100%;
   background-image: url(../img/icons/checkbox_ok.svg);
 }
+
+.close:hover {
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 525px) {
+  .modal__container {
+   width: 380px;
+   .modal-body {
+    padding: 35px 15px;
+    width: 380px;
+    .input-btn {
+      width: 300px;
+      height: 60px;
+      padding: 27px 50px 27px 45px;
+    }
+    .button-orange {
+      width: 300px;
+      height: 60px;
+    }
+   }
+  }
+ }
+
+ 
+@media screen and (max-width: 382px) {
+  .modal__container {
+    h4 {
+      font-size: 20px;
+    }
+   width: 350px;
+   .modal-body {
+    padding: 20px 10px;
+    width: 350px;
+    .input-btn {
+      width: 300px;
+      height: 60px;
+      padding: 27px 50px 27px 45px;
+    }
+    .button-orange {
+      width: 300px;
+      height: 60px;
+    }
+   }
+  }
+ }

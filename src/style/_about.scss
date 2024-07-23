@@ -184,15 +184,18 @@
 }
 
 @media screen and (max-width: 575px) {
-
+  .about-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .about img {
-    width: max(357px, min(90vw, 780px));
-    height: max(246px, min(60vw, 530px));
+    width: max(360px, min(90vw, 780px));
+    height: max(250px, min(60vw, 530px));
     border-radius: 20px;
 }
   .about .title-h2 {
-    padding-bottom: 31px;
-    padding-left: 3px;
+    padding-bottom: 26px;
+    padding-left: 8px;
   }
 
   .paragraph-about {
@@ -202,4 +205,32 @@
 
 
 }
+
+
+@media screen and (max-width: 381px) {
+  .about .title-h2 {
+    padding-bottom: 26px;
+    padding-left: 4px;
+  }
+
+
+
+
+  .about__top .paragraph,
+  .about__bottom .paragraph,
+  .paragraph-about {
+    padding-left: 7px;
+    br {
+      display: block;
+    }
+  }
+
+
+  .about__bottom .paragraph {
+    br {
+      display: none;
+    }
+  }
+}
+
 

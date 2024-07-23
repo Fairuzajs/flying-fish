@@ -1,5 +1,56 @@
 .video {
-    .title-h2 {
-        color:black;
+  padding-bottom: 155px;
+  .title-h2 {
+    color: black;
+    padding-bottom: 99px;
+  }
+
+  .video-slider {
+    min-width: 0;
+    padding-bottom: 70px;
+    .slick-track {
+      display: flex;
+      gap: 50px;
+      align-items: center;
     }
+
+    .slick-list {
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+
+  .video-slider__item video {
+    min-width: 540px;
+    height: 340px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px 0px rgba(15,73,137,0.2);
+    position: relative;
+    z-index: 5;
+  }
+
+  .btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+  }
+
+}
+.slick-dots {
+  text-align: center;
+  display: flex; // поставить кнопки в ряд
+gap: 60px;
+  list-style: none; // убираем черные маркеры
+}
+
+.slick-dots button {
+  border: 1px solid #f9d577; // без рамки
+  border-radius: 8px;
+  background-color: #f9d577;
+  height: 16px; // высота точки
+  width: 16px; // ширина точки
+  margin: 5px; // отступы между точками
+  outline: none; // убираем обводку
 }

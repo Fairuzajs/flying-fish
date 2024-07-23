@@ -13,6 +13,9 @@
     align-items: start;
     font-size: 20px;
     line-height: 30px;
+    br {
+      display: none;
+    }
   }
 
   .button-orange {
@@ -316,12 +319,19 @@
     padding-top: 200px;
   }
   .header-top {
-    align-items: center;
     flex-direction: column-reverse;
     gap: 76px;
+    align-items: center;
+    .header-right {
+      align-self: start;
+    }
     .header-contacts .header-links {
       font-size: 24px;
     }
+  }
+
+  .header .container {
+    padding-left: 50px;
   }
 }
 
@@ -332,16 +342,19 @@
     padding-top: 160px;
   }
   .header {
-    opacity: 0.8;
+    border-radius: 0px 0px 40px 40px;
+    background-position: 75% 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url(../img/main.png);
     .location {
       font-size: 16px;
+      align-self: center;
 
+    }
+    .container {
+      padding-left: 20px;
     }
   }
 
-  .header-top {
-    align-items: start;
-  }
 
   [data-burger] {
    right: 20px;
@@ -351,5 +364,73 @@
 
 
 @media screen and (max-width: 525px) {
- 
+ .header-main {
+  padding-top: 130px;
+  padding-bottom: 300px;
+ }
+.header .location {
+  br {
+    display: block;
+  }
+  img {
+    width: 15px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+  text-align: center;
+gap: 7px;
+}
+.header .location span {
+  display: none;
+}
+
+
+.header .location::after {
+  max-width: 271px;
+  content: 'Эко-отель: Волгоградская облaсть, Ленинский район, с. Каршевитое';
+}
+ .menu-btn {
+  width: 30px;
+  height: 33px;
+  span::before {
+    width: 22px;
+    align-self: end;
+    left: 8px;
+  }
+}
+
+.header-right {
+  .header-contacts {
+    gap: 20px;
+  }
+}
+
+.header-main {
+  padding-top: 82px;
+  .button-orange {
+    margin-top: 30px;
+  }
+.logo-img {
+  width: 250px;
+}
+}
+}
+
+@media screen and (max-width: 525px)  {
+  .header {
+    background-position: 60% 100%;
+    padding-top: 14px;
+  }
+  [data-burger] {
+    right: 13px;
+    top: 17px;
+   }
+
+   .header-top {
+    gap: 66px;
+   }
+
+   .header-main {
+    padding-bottom: 340px;
+   }
 }

@@ -100,19 +100,19 @@
             <p class="paragraph">
               Наш эко-отель находится в национальном парке
               <span>Волго-Ахтубинская пойма</span>, на границе Волгоградской и
-              Астраханской области. Здесь царит дух настоящей русской деревни!
+              Астраханской области. Здесь царит дух настоящей  русской деревни!
               Мы предусмотрели всё, для того, чтобы ваш отдых был максимально
               комфортным и разнообразным: натуральные срубы в живописном месте,
               Экологически чистые продукты, настоящая русская печка, мы сами
               печем хлеб и выращиваем зелень, баня на воде, мини зоопарк, конные
-              прогулки, рыбалка с профессиональным егерем, лодки в аренду,
+              прогулки, рыбалка с профессиональным егерем, лодки <br> в аренду,
               <span>трансфер из Волгограда</span>.
             </p>
           </div>
           <p class="paragraph-about">
             Мы принимаем гостей <span>круглый год</span>. Приезжайте и
             погрузитесь в атмосферу максимального расслабления! Поговаривают,
-            что 2 дня проведённых на «Летучей рыбе»
+            что 2 дня проведённых <br> на «Летучей рыбе»
             <span>равняются неделе отдыха на море!</span>
           </p>
           <div class="about__bottom">
@@ -125,7 +125,7 @@
                 рождения и корпоративы на свежем воздухе.
                 <span>Одновременно здесь может разместиться 100 гостей</span>.
               </p>
-              <a class="button-orange">получить консультацию</a>
+              <a class="button-orange" data-path="modal">получить консультацию</a>
             </div>
             <img src="./img/about_2.png" alt="домики летучая рыба" />
           </div>
@@ -219,7 +219,7 @@
                 яичницу из страусиных яиц и домашние перепелиные яйца.
               </p>
             </div>
-            <div class="form-events fadeInUp" data-wow-duration="1s">
+            <div class="form-events">
               <img class="event-img-back" src="./img/wave_1.svg" alt="wave">
               <div class="form-body">
                 <h3>Укажите контактные данные для консультации</h3>
@@ -275,19 +275,52 @@
       </section>
       <section class="video" id="video">
         <h2 class="title-h2">Посмотрите наши видео</h2>
+        <div class="video-wrapper">
+          <div class="video-slider">
+            <div class="video-slider__item">
+              <video id="fon">
+                <source src="./img/video/IMG_2333.MOV" type="video/mp4">
+                </video>
+                <img src="./img/icons/btn-play.png" alt="btn-play" class="btn-play">
+            </div>
+            <div class="video-slider__item">
+              <video id="fon">
+                <source src="./img/video/IMG_2334.MOV" type="video/mp4">
+                </video>
+                <img src="./img/icons/btn-play.png" alt="btn-play" class="btn-play">
+            </div>
+            <div class="video-slider__item">
+              <video id="fon">
+                <source src="./img/video/IMG_2335.MOV" type="video/mp4">
+                </video>
+                <img src="./img/icons/btn-play.png" alt="btn-play" class="btn-play">
+            </div>
+            <div class="video-slider__item">
+              <video id="fon">
+                <source src="./img/video/IMG_2336.MOV" type="video/mp4">
+                </video>
+                <img src="./img/icons/btn-play.png" alt="btn-play" class="btn-play">
+            </div>
+            <div class="video-slider__item">
+              <video id="fon">
+                <source src="./img/video/video_2024-07-05_13-20-11.mp4" type="video/mp4">
+                </video>
+                <img src="./img/icons/btn-play.png" alt="btn-play" class="btn-play">
+            </div>
+          
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
-      
-        <div class="contacts" id="contacts">
-
-  <h2 class="title-h2">Наши контакты</h2>
-  <p class="paragraph">
+<footer class="footer">    
+  <div class="contacts" id="contacts">
+    <h2 class="title-h2">Наши контакты</h2>
+    <p class="paragraph">
     Отпуск, проведенный в деревенском окружении, будет полезен для
     каждого, кто хочет напитаться новыми впечатлениями, сменить
     обстановку и побыть вдали от цивилизации.
-  </p>
+    </p>
   <div class="contacts-address">
    <div class="contact-address-left">
     <img src="./img/logo/logo_footer.png" alt="logo" />
@@ -303,7 +336,7 @@
     <a href="tel:89275373737" class="contact-item-phone"
       >8 (927) 537-37-37</a
     >
-    <a class="button" data-path="menu">оставить заявку</a>
+    <a class="button" data-path="modal">оставить заявку</a>
    </div>
 
   </div>
@@ -392,16 +425,16 @@
  </div>
      
     </footer>
-    <div class="modal fade">
-        <div class="modal-content" data-target="modal">
+    <div class="modal">
+        <div class="modal__container" data-target="modal">
           <div class="modal-body">
             <button type="button" class="close">
               <img src="./img/icons/btn_close.svg" alt="" width="20" height="20"></button>
             <h4>
-              Заполните форму <span class="d-none d-lg-block"></span>
+              Заполните форму
               на&nbsp;бесплатную консультацию
             </h4>
-            <p class="form-text">Наш менеджер свяжется с вами <span class="d-none d-lg-block"></span>и ответит на все вопросы </p>
+            <p class="form-text">Наш менеджер свяжется с вами и ответит на все вопросы </p>
             <form action="send.php" method="POST">
               <input type="hidden" name="utm_source">
               <input type="hidden" name="utm_medium">
@@ -410,10 +443,10 @@
               <input type="hidden" name="utm_content">
     
               <label>Как к вам обращаться</label> 
-              <input class="input-btn" type="text" name="name" placeholder="Ваше имя" required="">
+              <input class="input-btn" type="text" name="name" placeholder="Ваше имя" required>
               <label>Введите телефон</label>              
-              <input  class="input-btn input-tel" type="tel" name="phone" placeholder="+7 (___) ___ - __ - __" required="">
-              <input type="hidden" name="email" value="без email" required="">
+              <input  class="input-btn input-tel" type="tel" name="phone" placeholder="+7 (___) ___ - __ - __" required>
+              <input type="hidden" name="email" value="без email" required>
               <input type="submit" value="Получить консультацию" class="button-orange">
               <div class="bnt-checkbox">
                 <input class="checkbox" type="checkbox" id="personal-data-2">

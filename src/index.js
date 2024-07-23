@@ -1,104 +1,21 @@
 import './index.html';
 import './style.scss';
-// $('.major__slider-wrapper').slick({
-//   speed: 1000,
-//   fade: true,
-//   cssEase: 'linear',
-//   prevArrow: $('.major__prev'),
-//   nextArrow: $('.major__next'),
-// });
 
-// $('.experts__slider_wrapper').slick({
-//   infinite: true,
-//   speed: 500,
-//   fade: false,
-//   cssEase: 'linear',
-//   slidesToShow:4,
-//   centerMode:false,
-//   slidesToScroll:1,
-//   variableWidth: true,
-//   prevArrow: $('.experts__prev'),
-//   nextArrow: $('.experts__next'),
-// });
-// $('.idea__slider_wrapper').slick({
-//   infinite: true,
-//   speed: 500,
-//   fade: false,
-//   cssEase: 'linear',
-//   slidesToShow:1,
-//   centerMode:false,
-//   slidesToScroll:1,
-//   variableWidth: true,
-//   prevArrow: $('.idea__prev'),
-//   nextArrow: $('.idea__next'),
-// });
-// $('.news__slider_wrapper').slick({
-//   infinite: true,
-//   speed: 500,
-//   fade: false,
-//   cssEase: 'linear',
-//   slidesToShow:3,
-//   centerMode:false,
-//   slidesToScroll:1,
-//   variableWidth: true,
-//   prevArrow: $('.news__prev'),
-//   nextArrow: $('.news__next'),
-// });
 
-// $('.support__stategic__wrapper').slick({
-//  infinite: true,
-//   speed: 8000,
-//   fade: false,
-//   cssEase: 'linear',
-//   slidesToShow:1,
-//   centerMode:false,
-//   slidesToScroll:1,
-//   variableWidth: true,
-//   arrows:false,
-//   autoplay: true,
-//   autoplaySpeed: 0,
-//   responsive: [
-//     {
-//       breakpoint: 801,
-//       settings: { 
-//         rows: 2,
-//         infinite: true,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       }
-//     }
-// ]
-// });
-// $('.support__info_wrapper').slick({
-//   infinite: true,
-//   speed: 8000,
-//   fade: false,
-//   cssEase: 'linear',
-//   slidesToShow:1,
-//   centerMode:false,
-//   slidesToScroll:1,
-//   variableWidth: true,
-//   arrows:false,
-//   autoplay: true,
-//   autoplaySpeed: 0,
-//   rtl:true,
-//   responsive: [
-//     {
-//       breakpoint: 801,
-//       settings: { 
-//         rows: 2,
-//         infinite: true,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       }
-//     }
-// ]
-// });
-
-// $('.header__burger').click(function(){
-//   $(this).toggleClass('active');
-//   $('.header__nav').toggleClass('active');
-// })
+$('.video-slider').slick({
+  infinite: true,
+  speed: 1200,
+  fade: false,
+  cssEase: 'linear',
+  slidesToShow:3,
+  slidesToScroll:1,
+  variableWidth: true,
+  autoplay: true,
+  centerMode: true,
+  arrows: false,
+  dots: true,
+  dotsClass: 'slick-dots',
+});
 
 
 // мобильное меню
@@ -234,7 +151,7 @@ export class Modal {
 		this.modalContainer = false;
 		this.previousActiveElement = false;
 		this.fixBlocks = document.querySelectorAll(".fix-block");
-		this.focusElements = ["a[href]", "input", "button", "select", "textarea", "[tabindex]"];
+		
 		this.events();
 	}
 
@@ -248,7 +165,7 @@ export class Modal {
 						let target = clickedElement.dataset.path;
 						let animation = clickedElement.dataset.animation;
 						let speed = clickedElement.dataset.speed;
-						this.animation = animation ? animation : "fade";
+						this.animation = animation ? animation : "fadeInUp";
 						this.speed = speed ? parseInt(speed) : 300;
 						this.modalContainer = document.querySelector(`[data-target="${target}"]`);
 						this.open();
@@ -281,7 +198,7 @@ export class Modal {
 			this.modal.addEventListener(
 				"click",
 				function(e) {
-					if (!e.target.classList.contains("modal-body") && !e.target.closest(".modal-body") && this.isOpen) {
+					if (!e.target.classList.contains("modal__container") && !e.target.closest(".modal__container") && this.isOpen) {
 						this.close();
 					}
 				}.bind(this)
@@ -303,7 +220,7 @@ export class Modal {
 			this.options.isOpen(this);
 			this.modalContainer.classList.add("animate-open");
 			this.isOpen = true;
-			this.focusTrap();
+			// this.focusTrap();
 		}, this.speed);
 	}
 
@@ -317,34 +234,34 @@ export class Modal {
 			this.enableScroll();
 			this.options.isClose(this);
 			this.isOpen = false;
-			this.focusTrap();
+			// this.focusTrap();
 		}
 	}
 
-	focusCatch(e) {
-		const focusable = this.modalContainer.querySelectorAll(this.focusElements);
-		const focusArray = Array.prototype.slice.call(focusable);
-		const focusedIndex = focusArray.indexOf(document.activeElement);
+	// focusCatch(e) {
+	// 	const focusable = this.modalContainer.querySelectorAll(this.focusElements);
+	// 	const focusArray = Array.prototype.slice.call(focusable);
+	// 	const focusedIndex = focusArray.indexOf(document.activeElement);
 
-		if (e.shiftKey && focusedIndex === 0) {
-			focusArray[focusArray.length - 1].focus();
-			e.preventDefault();
-		}
+	// 	if (e.shiftKey && focusedIndex === 0) {
+	// 		focusArray[focusArray.length - 1].focus();
+	// 		e.preventDefault();
+	// 	}
 
-		if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
-			focusArray[0].focus();
-			e.preventDefault();
-		}
-	}
+	// 	if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
+	// 		focusArray[0].focus();
+	// 		e.preventDefault();
+	// 	}
+	// }
 
-	focusTrap() {
-		const focusable = this.modalContainer.querySelectorAll(this.focusElements);
-		if (this.isOpen) {
-			focusable[0].focus();
-		} else {
-			this.previousActiveElement.focus();
-		}
-	}
+	// focusTrap() {
+	// 	const focusable = this.modalContainer.querySelectorAll(this.focusElements);
+	// 	if (this.isOpen) {
+	// 		focusable[0].focus();
+	// 	} else {
+	// 		this.previousActiveElement.focus();
+	// 	}
+	// }
 
 	disableScroll() {
 		let pagePosition = window.scrollY;
@@ -381,3 +298,10 @@ export class Modal {
 
 export const modal = new Modal({});
 
+// логика для видео 
+const btnOk = document.querySelector('.btn-play');
+const wrapperVideo = document.getElementById('fon');
+
+btnOk.addEventListener('click',function(){
+  wrapperVideo.play();
+});
